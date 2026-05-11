@@ -4,7 +4,6 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React from 'react'
 
 const Header = () => {
     const pathName = usePathname();
@@ -13,7 +12,7 @@ const Header = () => {
     <header>
         <div className='main-container inner'>
             <Link href='/'>
-                <Image src='logo.svg' alt='CoinPlus Logo' width={132} height={40} className='w-12 h-12' />
+                <Image src='/logo.svg' alt='CoinPlus Logo' width={132} height={40}/>
             </Link>
 
             <nav>
@@ -22,7 +21,7 @@ const Header = () => {
                     'is-home': true,
                 })}>Home</Link>
 
-                <p>Search Model</p>
+                <p>Search Modal</p>
 
                 <Link href='/coins' className={cn('nav-link', {
                     'is-active': pathName === '/coins',
